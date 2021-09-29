@@ -6,7 +6,7 @@ class Transaction(models.Model):
     qty = models.DecimalField(max_digits=30, decimal_places=15)
     operation = models.CharField(max_length=4)
     currency = models.CharField(max_length=10)
-    date_transaction = models.DateTimeField()
+    date_transaction = models.DateField()
     date_creation = models.DateTimeField(auto_now_add=True)
 
 

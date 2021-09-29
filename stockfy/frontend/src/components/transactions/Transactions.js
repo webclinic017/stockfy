@@ -6,7 +6,9 @@ import {getTransactions, deleteTransaction} from '../../actions/transactions.js'
 
 export class Transactions extends Component {
     static propTypes = {
-        transactions: PropTypes.array.isRequired
+        transactions: PropTypes.array.isRequired,
+        getTransactions: PropTypes.func.isRequired,
+        deleteTransaction: PropTypes.func.isRequired
     }
 
     componentDidMount() {

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { GET_TRANSACTIONS, DELETE_TRANSACTION } from './types';
+import { GET_TRANSACTIONS, DELETE_TRANSACTION, ADD_TRANSACTION } from './types';
 
 // get transactions 
 
@@ -23,6 +23,18 @@ export const deleteTransaction = (id) => dispatch => {
         dispatch({
             type: DELETE_TRANSACTION,
             payload: id
+        });
+    }).catch(err => console.log(err));
+}
+
+// add transaction 
+
+export const addTransaction = transaction => dispatch => {
+    axios.post('/api/transactions/', transaction)
+    .then(res => {
+        dispatch({
+            type: ADD_TRANSACTION,
+            payload: res.data
         });
     }).catch(err => console.log(err));
 }
