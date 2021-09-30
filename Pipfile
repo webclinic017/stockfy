@@ -8,6 +8,7 @@ django = "*"
 djangorestframework = "*"
 django-rest-knox = "*"
 python-decouple = "*"
+alpha-vantage = "*"
 
 [dev-packages]
 

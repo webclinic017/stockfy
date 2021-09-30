@@ -24,6 +24,14 @@ export class Form extends Component {
         const {stock_quote, price, qty, operation, currency, date_transaction} = this.state;
         const transaction = {stock_quote, price, qty, operation, currency, date_transaction};
         this.props.addTransaction(transaction)
+        this.setState({
+            stock_quote: '',
+            price: 0,
+            qty:0,
+            operation: '',
+            currency:'',
+            date_transaction: ''
+        })
     }; 
 
     render() {
